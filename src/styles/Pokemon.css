@@ -1,0 +1,123 @@
+.gridSystem {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    justify-content: center;
+    row-gap: 200px;
+    column-gap: 20px;
+    max-width: 1250px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+
+.pokemonContainer {
+    position: relative;
+    /* width: 350px;
+    height: 450px; */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -25px;
+    border-radius: 15px;
+    background-color: white;
+    padding-bottom: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.pokemonContainer:hover {
+    transform: scale(1.05);
+    transition: transform 0.9s;
+    transition-timing-function: ease-out
+}
+
+.imageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 130px;
+    background-color: #deede4;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.imageContainer img {
+    position: absolute;
+    z-index: 10;
+    top: -70px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.imageContainer span {
+    position: absolute;
+    background-color: black;
+    top: 80px;
+    filter: blur(4px);
+    opacity: 30%;
+    height: 5px;
+    width: 70%;
+    border-radius: 30%;
+}
+
+.pokDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 5px;
+}
+
+.smallNames {
+    text-transform: capitalize;
+    font-size: 45px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.bigNames {
+    text-transform: capitalize;
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.typeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.typeContainer h4 {
+    margin: 0;
+}
+
+.typeContainer div {
+    display: flex;
+    width: 55%;
+    gap: 10px;
+}
+
+.smallAbility {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0px 3px;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    padding-right: 5px;
+}
+
+.bigAbility {
+    font-size: 10px;
+    font-weight: 500;
+    margin: 0px 3px;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    padding-right: 5px;
+}
+
+.typeContainer span:not(:last-child) {
+    border-right: 1px solid black;
+}

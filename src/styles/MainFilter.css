@@ -1,0 +1,25 @@
+.radioContainer {
+    display: flex;
+    gap: 50px;
+    padding: 25px 30px;
+    flex-wrap: wrap;
+}
+
+.radioBtn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.radioBtn input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    border: 1px grey solid;
+    cursor: pointer
+}
+
+.radioBtn label {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: capitalize;
+}

@@ -1,0 +1,124 @@
+.navContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 15px;
+    gap: 20px
+}
+
+.welcomeContainer h1 {
+    font-size: 90px;
+    line-height: 90px;
+    font-weight: 500;
+}
+
+.detailsContainer {
+    align-self: center;
+    max-width: 550px;
+}
+
+.detailsContainer h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.detailsContainer strong {
+    font-weight: 300;
+}
+
+.searchContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchContainer input {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+}
+
+.searchContainer button {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 40px;
+    padding: 10px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    right: 0px;
+}
+
+.searchContainer button:hover {
+    background-color: #0045ff;
+}
+
+.searchContainer button:active {
+    background-color: #ff2e2e;
+}
+
+.filterContainer {
+    padding: 40px 155px;
+}
+
+.filterIcon {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+
+@media (max-width: 675px) {
+    .navContainer {
+        flex-direction: column;
+    }
+
+    .welcomeContainer h1 {
+        font-size: clamp(50px, 60px, 70px);
+        line-height: 55px;
+    }
+
+    .detailsContainer {
+        align-self: flex-start;
+    }
+
+    .detailsContainer h3 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+
+    .searchContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .searchContainer input {
+        width: 94%;
+        text-align: center;
+    }
+
+    .filterContainer {
+        padding: 40px 0px;
+    }
+
+    .searchContainer button {
+        position: relative;
+        padding: 10px;
+        width: 100%;
+    }
+
+
+}
