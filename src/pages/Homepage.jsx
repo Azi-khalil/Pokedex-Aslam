@@ -13,12 +13,9 @@ import pokeball from "../images/Pokeball.svg"
 
 
 function Homepage() {
-    const [pokemonNames,setPokemonNames] = useState()
     const [pokemon,setPokemon] = useState([])
-    const [searchPokemon,setSearchPokemon] = useState('')
     const [notFound,setNotFound] = useState(false)
     const [emptyError,setEmptyError] = useState(false)
-    const [options,setOptions] = useState([])
     const [seeMore,setSeeMore] = useState(6)
     const [noType,setNoType] = useState(false)
     const [loading,setLoading] = useState(false)
@@ -32,7 +29,6 @@ function Homepage() {
         setLoading(true)
         await axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=100`).then((res) => {
             const pokemonName = res.data.results
-            setPokemonNames(pokemonName)
             randomPokemons(pokemonName)
         }).catch((err) => {
             console.log(err)
@@ -124,10 +120,10 @@ function Homepage() {
                         <button onClick={() => setSeeMore(seeMore + 3)}>LOAD MORE</button>
                     </div>
                     <div>
-                        <img style={{position: "absolute",top: 300}} src={pokeball} />
-                        <img style={{position: "absolute",right: 0,top: 70}} src={pokeball} />
-                        <img style={{position: "absolute",right: 270,top: 675}} src={pokeball} />
-                        <img style={{position: "absolute",left: 0,bottom: 250}} src={pokeball} />
+                        <img style={{position: "absolute",top: 300}} src={pokeball} alt='pokeball' />
+                        <img style={{position: "absolute",right: 0,top: 70}} src={pokeball} alt='pokeball' />
+                        <img style={{position: "absolute",right: 270,top: 675}} src={pokeball} alt='pokeball' />
+                        <img style={{position: "absolute",left: 0,bottom: 250}} src={pokeball} alt='pokeball' />
                     </div>
                 </div>
             </div>

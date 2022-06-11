@@ -1,9 +1,7 @@
-import React,{useState} from 'react'
+import React from 'react'
 import '../styles/MainFilter.css'
 
 function MainFilter({filterOptions}) {
-
-    const [options,setOptions] = useState({})
 
     const types = ['normal','water','grass','electric','ice','ghost','dark','dragon','fairy','fighting','poison','ground','flying','psychic','rock','steel','bug']
 
